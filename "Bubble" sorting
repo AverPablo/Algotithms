@@ -1,0 +1,14 @@
+print ("Enter the numbers of elements and values.")
+size_of_array = int(input())
+array = []
+for a in range(size_of_array):
+    array.append(int(input()))
+for j in range(size_of_array-1, 0, -1):
+    for i in range(size_of_array - 1):
+        if (i < j):
+            if (array[i] > array[i+1]):
+                temp = array[i+1]
+                array[i+1] = array[i]
+                array[i]=temp
+print(array)
+
